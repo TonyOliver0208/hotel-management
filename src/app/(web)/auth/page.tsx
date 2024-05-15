@@ -59,49 +59,49 @@ const Auth = () => {
   };
 
   return (
-    <section className='container mx-auto'>
-      <div className='p-6 space-y-4 md:space-y-6 sm:p-8 w-80 md:w-[70%] mx-auto'>
-        <div className='flex mb-8 flex-col md:flex-row items-center justify-between'>
-          <h1 className='text-xl font-bold leading-tight tracking-tight md:text-2xl'>
+    <section className="container mx-auto">
+      <div className="p-6 space-y-4 md:space-y-6 sm:p-8 w-80 md:w-[70%] mx-auto">
+        <div className="flex mb-8 flex-col md:flex-row items-center justify-between">
+          <h1 className="text-xl font-bold leading-tight tracking-tight md:text-2xl">
             Create an account
           </h1>
           <p>OR</p>
-          <span className='inline-flex items-center'>
+          <span className="inline-flex items-center">
             <AiFillGithub
               onClick={loginHandler}
-              className='mr-3 text-4xl cursor-pointer text-black dark:text-white'
-            />{' '}
+              className="mr-3 text-4xl cursor-pointer text-black dark:text-white"
+            />{" "}
             |
             <FcGoogle
               onClick={loginHandler}
-              className='ml-3 text-4xl cursor-pointer'
+              className="ml-3 text-4xl cursor-pointer"
             />
           </span>
         </div>
 
-        <form className='space-y-4 md:space-y-6' onSubmit={handleSubmit}>
+        <form className="space-y-4 md:space-y-6" onSubmit={handleSubmit}>
           <input
-            type='email'
-            name='email'
-            placeholder='name@company.com'
+            type="email"
+            name="email"
+            placeholder="name@company.com"
             required
             className={inputStyles}
             value={formData.email}
             onChange={handleInputChange}
           />
           <input
-            type='text'
-            name='name'
-            placeholder='John Doe'
+            type="text"
+            name="name"
+            placeholder="John Doe"
             required
             className={inputStyles}
             value={formData.name}
             onChange={handleInputChange}
           />
           <input
-            type='password'
-            name='password'
-            placeholder='password'
+            type="password"
+            name="password"
+            placeholder="password"
             required
             minLength={6}
             className={inputStyles}
@@ -110,15 +110,18 @@ const Auth = () => {
           />
 
           <button
-            type='submit'
-            className='w-full bg-tertiary-dark focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center'
+            type="submit"
+            className="w-full bg-tertiary-dark focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center"
           >
             Sign Up
           </button>
         </form>
 
-        <button onClick={loginHandler} className='text-blue-700 underline'>
-          login
+        <button
+          onClick={loginHandler}
+          className="w-full bg-blue-500 hover:bg-blue-600 focus:outline-none text-white font-semibold py-2 px-4 rounded-lg transition duration-300"
+        >
+          Login
         </button>
       </div>
     </section>
